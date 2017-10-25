@@ -2,8 +2,11 @@ import webbrowser
 import os
 import re
 
+
 # Styles and scripting for the page
 main_page_head = '''
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <title>Fresh Tomatoes!</title>
@@ -91,6 +94,7 @@ main_page_head = '''
 </head>
 '''
 
+
 # The main page layout and title bar
 main_page_content = '''
 <!DOCTYPE html>
@@ -126,6 +130,7 @@ main_page_content = '''
 </html>
 '''
 
+
 # A single movie entry html template
 movie_tile_content = '''
 <div class="col-md-4 col-lg-5ths movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
@@ -135,6 +140,7 @@ movie_tile_content = '''
     <h4>{movie_year}</h4>
 </div>
 '''
+
 
 def create_movie_tiles_content(movies):
     # The HTML content for this section of the page
@@ -154,6 +160,7 @@ def create_movie_tiles_content(movies):
             trailer_youtube_id=trailer_youtube_id
         )
     return content
+
 
 def open_movies_page(movies):
   # Create or overwrite the output file
